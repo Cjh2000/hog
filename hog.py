@@ -78,7 +78,12 @@ def is_swap(player_score, opponent_score):
     """
     # BEGIN PROBLEM 4
     "*** YOUR CODE HERE ***"
+    return swap_diff(player_score) == swap_diff(opponent_score)
     # END PROBLEM 4
+
+def swap_diff(score):
+    score = score % 100
+    return abs(score%10 - score //10)
 
 
 def other(player):
