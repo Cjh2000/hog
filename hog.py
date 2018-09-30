@@ -22,6 +22,14 @@ def roll_dice(num_rolls, dice=six_sided):
     assert num_rolls > 0, 'Must roll at least once.'
     # BEGIN PROBLEM 1
     "*** YOUR CODE HERE ***"
+    sum = 0
+    for x in range(num_rolls):
+    	roll_value = dice()
+    	if sum == 1 or roll_value == 1:
+    		sum = 1
+    		continue
+    	sum += roll_value
+    return sum
     # END PROBLEM 1
 
 
@@ -33,6 +41,12 @@ def free_bacon(score):
     assert score < 100, 'The game should be over.'
     # BEGIN PROBLEM 2
     "*** YOUR CODE HERE ***"
+    newscore  = 2 * (score//10) - score%10
+    if newscore > 1:
+    	return newscore
+    else:
+   	 return 1
+    
     # END PROBLEM 2
 
 
